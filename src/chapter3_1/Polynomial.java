@@ -24,9 +24,15 @@ public class Polynomial {
         Polynomial result = new Polynomial();
         p1.current = p1.head.next;
         p2.current = p2.head.next;
+
+        // 当两个多项式都还没有到最后一项时，比较指数大小，
+        // 指数相同时系数相加然后insert，指数不同时，insert指数小的那个
         while (p1.current != null && p2.current != null) {
             if (p1.current.exp == p2.current.exp) {
-                result.insert(new PolyNode(p1.current.coef + p2.current.coef, p1.current.exp));
+                int newCoef = p1.current.coef + p2.current.coef;
+                if (newCoef != 0){
+                    result.insert(new PolyNode(newCoef, p1.current.exp));
+                }
                 p1.current = p1.current.next;
                 p2.current = p2.current.next;
             } else if (p1.current.exp < p2.current.exp) {
@@ -37,10 +43,14 @@ public class Polynomial {
                 p2.current = p2.current.next;
             }
         }
+
+        // 当p2达到最后一项时，插入p1所有剩下的项
         while (p1.current != null) {
             result.insert(p1.current);
             p1.current = p1.current.next;
         }
+
+        // 当p1达到最后一项时，插入p2所有剩下的项
         while (p2.current != null) {
             result.insert(p2.current);
             p2.current = p2.current.next;
@@ -59,7 +69,7 @@ public class Polynomial {
 
     public static void main(String[] args) {
         Polynomial p1 = new Polynomial();
-        p1.insert(new PolyNode(2, 2));
+        p1.insert(new PolyNode(-8, 2));
         p1.insert(new PolyNode(100, 3));
         p1.insert(new PolyNode(45, 5));
         p1.insert(new PolyNode(3, 20));

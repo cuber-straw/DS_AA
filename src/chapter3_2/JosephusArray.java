@@ -6,12 +6,12 @@ public class JosephusArray {
         for (int i=0; i<n; i++){
             alive[i] = true;
         }
-        int numOfAlivePeople = n;
+        int numOfAlivePeople = n; // 标记场上还有几人未被淘汰
         int index = 0;
         int count = 1;
         while (true){
 
-            // 当前序号的人已经淘汰,那么就继续检查下一个人，知道找到没有淘汰的人
+            // 当前序号的人已经淘汰,那么就继续检查下一个人，直到找到没有淘汰的人
             while (!alive[index]){
                 index++;
                 if (index == n){

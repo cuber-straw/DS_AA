@@ -1,5 +1,9 @@
 package chapter3_1;
 
+/**
+ * PolyNode类，多项式中的每个结点
+ */
+
 public class PolyNode {
     int coef;
     int exp;

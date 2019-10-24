@@ -1,11 +1,11 @@
 package chapter3_2;
 
-public class Josephus {
+public class JosephusList {
 
     /**
      *
      * @param n 圆桌边所围的总人数编号为1, 2, 3, ..., n-1, n
-     * @param m 每几人就淘汰一人
+     * @param m 每m人就淘汰一人
      * @return 最后留下的人的序号
      */
     public int josephus(int n, int m){
@@ -42,7 +42,7 @@ public class Josephus {
     }
 
     public static void main(String[] args) {
-        Josephus chapter3_2 = new Josephus();
+        JosephusList chapter3_2 = new JosephusList();
         System.out.println(chapter3_2.josephus(35, 46));
     }
 }
