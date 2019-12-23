@@ -20,6 +20,6 @@ public class HanoiTower {
     }
 
     public static void main(String[] args) {
-        moveDISKs(3, 'A', 'B', 'C');
+        moveDISKs(4, 'A', 'B', 'C');
     }
 }

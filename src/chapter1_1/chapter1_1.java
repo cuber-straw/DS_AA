@@ -25,7 +25,7 @@ public class chapter1_1 {
     }
 
     public static void main(String[] args) {
-        int[] a = new int[3];
-        func(5, 3, a, 0);
+        int[] a = new int[50];
+        func(6, 4, a, 0);
     }
 }

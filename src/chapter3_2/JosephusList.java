@@ -43,6 +43,6 @@ public class JosephusList {
 
     public static void main(String[] args) {
         JosephusList chapter3_2 = new JosephusList();
-        System.out.println(chapter3_2.josephus(35, 46));
+        System.out.println(chapter3_2.josephus(57, 46));
     }
 }
